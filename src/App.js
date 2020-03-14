@@ -1,13 +1,15 @@
 import React from 'react';
+
+import Router from './Router';
 import UpdateApp from './components/UpdateApp';
 
-export default function App() {
+function App() {
   return (
-    <header>
-      <p>
-        Edit <code>src/App.js</code> and save to reload.
-      </p>
+    <main>
+      <Router />
       <UpdateApp />
-    </header>
+    </main>
   );
 }
+
+export default App;
