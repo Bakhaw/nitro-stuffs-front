@@ -1,6 +1,7 @@
 import React from 'react';
 
-import maps from '../../maps';
+import maps from '../../static/maps';
+
 import MapCard from '../MapCard';
 
 function MapList() {
