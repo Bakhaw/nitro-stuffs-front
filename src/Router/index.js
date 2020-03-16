@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import NavBar from '../components/NavBar';
 
-import Home from '../screens/Home';
 import Maps from '../screens/Maps';
 
 // Refactor this Router later with lazy, Suspense, etc..
@@ -14,10 +13,11 @@ function Router() {
     <BrowserRouter>
       <>
         <NavBar />
-        <Switch>
-          <Route path='/maps' component={Maps} />
-          <Route exact path='/' component={Home} />
-        </Switch>
+        <div className='ScreenContainer'>
+          <Switch>
+            <Route path='/:game' component={Maps} />
+          </Switch>
+        </div>
       </>
     </BrowserRouter>
   );

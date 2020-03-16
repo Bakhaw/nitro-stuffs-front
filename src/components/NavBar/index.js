@@ -3,23 +3,23 @@ import { Link } from 'react-router-dom';
 
 const routes = [
   {
-    text: 'Home',
-    to: '/'
+    text: 'CSGO',
+    to: '/csgo'
   },
   {
-    text: 'Maps',
-    to: '/maps'
+    text: 'Valorant',
+    to: '/valorant'
   }
 ];
 
 function NavBar() {
   return (
-    <nav>
-      <ul>
+    <nav className='NavBar'>
+      <ul className='navbar-ul'>
         {routes.map(({ text, to }, index) => (
-          <Link key={index} to={to}>
-            {text}
-          </Link>
+          <li key={index}>
+            <Link to={to}>{text}</Link>
+          </li>
         ))}
       </ul>
     </nav>
