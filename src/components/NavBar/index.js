@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const routes = [
   {
     img: 'csgo',
-    to: '/csgo'
+    to: '/game/csgo'
   },
   {
     img: 'valorant',
-    to: '/valorant'
+    to: '/game/valorant'
   }
 ];
 

@@ -1,19 +1,22 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import maps from '../../static/maps';
 
 import MapCard from '../MapCard';
 
-function MapList() {
+function MapList({ game }) {
   return (
-    <ul>
+    <div className='MaplistContainer'>
       {maps.map(map => (
-        <li key={map.key}>
-          <MapCard map={map} />
-        </li>
+        <MapCard key={map.key} map={map} game={game} />
       ))}
-    </ul>
+    </div>
   );
 }
+
+MapList.propTypes = {
+  game: PropTypes.string.isRequired
+};
 
 export default MapList;
