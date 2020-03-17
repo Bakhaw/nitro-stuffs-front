@@ -1,0 +1,5 @@
+$NavBar__Height: 100%;
+$NavBar__Width: 100px;
+
+$Content__Width: calc(100% - #{$NavBar__Width});
+$Content__Height: 100%;

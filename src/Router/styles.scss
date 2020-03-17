@@ -1,3 +1,6 @@
 .ScreenContainer {
-  margin-left: 150px;
+  background: $BlueGrey;
+  height: $Content__Height;
+  width: $Content__Width;
+  margin-left: $NavBar__Width;
 }

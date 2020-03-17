@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const routes = [
   {
-    text: 'CSGO',
+    img: 'csgo',
     to: '/csgo'
   },
   {
-    text: 'Valorant',
+    img: 'valorant',
     to: '/valorant'
   }
 ];
@@ -15,10 +15,15 @@ const routes = [
 function NavBar() {
   return (
     <nav className='NavBar'>
-      <ul className='navbar-ul'>
-        {routes.map(({ text, to }, index) => (
-          <li key={index}>
-            <Link to={to}>{text}</Link>
+      <ul className='NavBar_Links'>
+        {routes.map(({ img, to }, index) => (
+          <li className='NavBar_Link' key={index}>
+            <Link to={to}>
+              <img
+                className='NavBar_img'
+                src={require(`../../static/images/${img}/${img}.png`)}
+              />
+            </Link>
           </li>
         ))}
       </ul>
