@@ -5,11 +5,11 @@ import maps from '../../static/maps';
 
 import MapCard from '../MapCard';
 
-function MapList({ game }) {
+function MapList() {
   return (
     <div className='MaplistContainer'>
       {maps.map(map => (
-        <MapCard key={map.key} map={map} game={game} />
+        <MapCard key={map.key} map={map} />
       ))}
     </div>
   );

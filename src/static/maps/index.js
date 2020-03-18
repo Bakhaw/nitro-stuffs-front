@@ -1,48 +1,39 @@
 const maps = [
   {
     key: 'de_cache',
-    name: 'Cache',
-    img: 'de_cache.png'
+    name: 'Cache'
   },
   {
     key: 'de_cobblestone',
-    name: 'Cobblestone',
-    img: 'de_cobblestone.png'
+    name: 'Cobblestone'
   },
   {
     key: 'de_dust2',
-    name: 'Dust II',
-    img: 'de_dust2.png'
+    name: 'Dust II'
   },
   {
     key: 'de_inferno',
-    name: 'Inferno',
-    img: 'de_inferno.png'
+    name: 'Inferno'
   },
   {
     key: 'de_mirage',
-    name: 'Mirage',
-    img: 'de_mirage.png'
+    name: 'Mirage'
   },
   {
     key: 'de_nuke',
-    name: 'Nuke',
-    img: 'de_nuke.png'
+    name: 'Nuke'
   },
   {
     key: 'de_overpass',
-    name: 'Overpass',
-    img: 'de_overpass.png'
+    name: 'Overpass'
   },
   {
     key: 'de_train',
-    name: 'Train',
-    img: 'de_train.png'
+    name: 'Train'
   },
   {
     key: 'de_vertigo',
-    name: 'Vertigo',
-    img: 'de_vertigo.png'
+    name: 'Vertigo'
   }
 ];
 

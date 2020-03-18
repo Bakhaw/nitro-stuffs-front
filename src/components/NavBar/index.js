@@ -20,6 +20,7 @@ function NavBar() {
           <li className='NavBar_Link' key={index}>
             <Link to={to}>
               <img
+                alt={img}
                 className='NavBar_img'
                 src={require(`../../static/images/${img}/${img}.png`)}
               />

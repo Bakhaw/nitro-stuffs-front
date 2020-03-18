@@ -1,13 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
-function MapCard({ map, game }) {
+function MapCard({ map, match }) {
+  const game = match.params.game;
   return (
     <div className='MapCard'>
       <img
         className='MapCard_img'
-        src={require(`../../static/images/csgo/${map.img}`)}
+        alt={map.name}
+        src={require(`../../static/images/csgo/${map.key}.jpg`)}
       />
       <Link to={`/game/${game}/${map.name}`}>
         <div className='MapCard_text'>
@@ -23,4 +25,4 @@ MapCard.propTypes = {
   game: PropTypes.string.isRequired
 };
 
-export default MapCard;
+export default withRouter(MapCard);
