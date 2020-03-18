@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import maps from '../../static/maps';
-
 import MapCard from '../MapCard';
 
-function MapList() {
+function MapList({ maps }) {
   return (
     <div className='MaplistContainer'>
       {maps.map(map => (
@@ -16,7 +14,6 @@ function MapList() {
 }
 
 MapList.propTypes = {
-  game: PropTypes.string.isRequired
+  maps: PropTypes.array.isRequired
 };
-
 export default MapList;
