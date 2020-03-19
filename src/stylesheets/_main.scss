@@ -1,0 +1,25 @@
+html,
+body,
+main {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#root {
+  height: 100%;
+}

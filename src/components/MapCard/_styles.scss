@@ -1,0 +1,23 @@
+.MapCard {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $MapCard__Width;
+  height: $MapCard__Height;
+  margin: 15px;
+  border-radius: 6px;
+
+  // background-image is set in ChampionCard component
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  h2 {
+    color: $White;
+  }
+}

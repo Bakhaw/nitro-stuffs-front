@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+"<nav className=\\"LeftMenu\\">
+  <ul className=\\"LeftMenu__links\\">
+    <li className=\\"LeftMenu__links__link\\">
+      <Link to=\\"/game/csgo\\">
+        <img alt=\\"csgo\\" className=\\"LeftMenu__links__img\\" src=\\"csgo.png\\" />
+      </Link>
+    </li>
+    <li className=\\"LeftMenu__links__link\\">
+      <Link to=\\"/game/valorant\\">
+        <img alt=\\"valorant\\" className=\\"LeftMenu__links__img\\" src=\\"valorant.png\\" />
+      </Link>
+    </li>
+  </ul>
+</nav>"
+`;
