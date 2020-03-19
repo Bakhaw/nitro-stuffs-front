@@ -5,7 +5,7 @@ import MapCard from '../MapCard';
 
 function MapList({ maps }) {
   return (
-    <div className='MaplistContainer'>
+    <div className='MapList'>
       {maps.map(map => (
         <MapCard key={map.key} map={map} />
       ))}
@@ -16,4 +16,5 @@ function MapList({ maps }) {
 MapList.propTypes = {
   maps: PropTypes.array.isRequired
 };
+
 export default MapList;

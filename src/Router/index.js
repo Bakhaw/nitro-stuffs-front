@@ -1,18 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import NavBar from '../components/NavBar';
+import LeftMenu from '../components/LeftMenu';
 
 import Maps from '../screens/Maps';
 import Stuffs from '../screens/Stuffs';
+
 // Refactor this Router later with lazy, Suspense, etc..
 // check this: https://github.com/Bakhaw/react-pwa-twitch/blob/master/src/Router/index.js
-
 function Router() {
   return (
     <BrowserRouter>
       <>
-        <NavBar />
+        <LeftMenu />
         <div className='ScreenContainer'>
           <Switch>
             <Route path='/game/:game/:map' component={Stuffs} />

@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render properly 1`] = `
-"<div className=\\"MaplistContainer\\">
+"<div className=\\"MapList\\">
   <withRouter(MapCard) map={{...}} />
   <withRouter(MapCard) map={{...}} />
   <withRouter(MapCard) map={{...}} />

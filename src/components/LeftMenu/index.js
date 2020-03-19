@@ -1,27 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const routes = [
-  {
-    img: 'csgo',
-    to: '/game/csgo'
-  },
-  {
-    img: 'valorant',
-    to: '/game/valorant'
-  }
-];
+import routes from './routes';
 
-function NavBar() {
+function LeftMenu() {
   return (
-    <nav className='NavBar'>
-      <ul className='NavBar_Links'>
+    <nav className='LeftMenu'>
+      <ul className='LeftMenu__links'>
         {routes.map(({ img, to }, index) => (
-          <li className='NavBar_Link' key={index}>
+          <li className='LeftMenu__links__link' key={index}>
             <Link to={to}>
               <img
                 alt={img}
-                className='NavBar_img'
+                className='LeftMenu__links__img'
                 src={require(`../../static/images/${img}/${img}.png`)}
               />
             </Link>
@@ -32,4 +23,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default LeftMenu;

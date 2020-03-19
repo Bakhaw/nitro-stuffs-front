@@ -6,9 +6,9 @@ import valorantMaps from '../../static/maps/valorant';
 import MapList from '../../components/MapList';
 
 function Maps({ match }) {
-  const game = match.params.game;
-
+  const { game } = match.params;
   let maps = [];
+
   if (game === 'csgo') {
     maps = csgoMaps;
   } else if (game === 'valorant') {

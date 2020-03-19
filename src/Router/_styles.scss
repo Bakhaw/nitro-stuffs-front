@@ -1,6 +1,6 @@
 .ScreenContainer {
   background: $BlueGrey;
-  height: $Content__Height;
+  min-height: $Content__Height;
   width: $Content__Width;
-  margin-left: $NavBar__Width;
+  margin-left: $LeftMenu__Width;
 }

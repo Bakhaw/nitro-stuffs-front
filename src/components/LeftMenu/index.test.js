@@ -1,9 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import NavBar from '.';
+import LeftMenu from '.';
 
 test('should render properly', () => {
-  const container = shallow(<NavBar />);
+  const container = shallow(<LeftMenu />);
   expect(container.debug()).toMatchSnapshot();
 });
