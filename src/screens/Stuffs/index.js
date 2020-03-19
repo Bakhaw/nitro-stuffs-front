@@ -1,7 +1,9 @@
 import React from 'react';
 
+import StuffList from '../../components/StuffList';
+
 function Stuffs() {
-  return <div>coucou</div>;
+  return <StuffList />;
 }
 
 export default Stuffs;

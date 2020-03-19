@@ -1,0 +1,11 @@
+.StuffList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+
+  a {
+    text-decoration: none;
+  }
+}
