@@ -1,6 +1,17 @@
-.LeftMenu {
-  position: fixed;
+.LeftMenu_button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  margin: 10px;
 
+  &__img {
+    fill: $White;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.LeftMenu {
   background: $Blue;
   width: $LeftMenu__Width;
   height: $LeftMenu__Height;

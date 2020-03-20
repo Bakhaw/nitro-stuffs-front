@@ -1,10 +1,11 @@
 .MapList {
   display: grid;
   grid-template-columns: repeat(auto-fill, 360px);
+  gap: 50px;
   justify-content: center;
   padding: 20px 0;
 
   @include desktop {
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, 290px);
   }
 }

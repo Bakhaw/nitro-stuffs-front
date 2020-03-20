@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 import LeftMenu from '../components/LeftMenu';
 
@@ -13,12 +13,11 @@ function Router() {
     <BrowserRouter>
       <>
         <LeftMenu />
-        <div className='ScreenContainer'>
-          <Switch>
-            <Route path='/game/:game/:map' component={Stuffs} />
-            <Route path='/game/:game' component={Maps} />
-          </Switch>
-        </div>
+        <Switch>
+          <Route path='/game/:game/:map' component={Stuffs} />
+          <Route path='/game/:game' component={Maps} />
+          <Redirect path='/' to='/game/csgo' />
+        </Switch>
       </>
     </BrowserRouter>
   );
