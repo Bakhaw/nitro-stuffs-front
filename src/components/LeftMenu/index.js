@@ -13,7 +13,7 @@ function LeftMenu() {
               <img
                 alt={img}
                 className='LeftMenu__links__img'
-                src={require(`../../static/images/${img}/${img}.png`)}
+                src={require(`../../static/images/${img}/game-icon/${img}.png`)}
               />
             </Link>
           </li>
