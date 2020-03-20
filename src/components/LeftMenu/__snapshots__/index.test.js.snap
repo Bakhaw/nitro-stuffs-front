@@ -1,18 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render properly 1`] = `
-"<nav className=\\"LeftMenu\\">
-  <ul className=\\"LeftMenu__links\\">
-    <li className=\\"LeftMenu__links__link\\">
-      <Link to=\\"/game/csgo\\">
-        <img alt=\\"csgo\\" className=\\"LeftMenu__links__img\\" src=\\"csgo.png\\" />
-      </Link>
-    </li>
-    <li className=\\"LeftMenu__links__link\\">
-      <Link to=\\"/game/valorant\\">
-        <img alt=\\"valorant\\" className=\\"LeftMenu__links__img\\" src=\\"valorant.png\\" />
-      </Link>
-    </li>
-  </ul>
-</nav>"
+"<Fragment>
+  <button className=\\"LeftMenu_button\\" onClick={[Function]}>
+    <img className=\\"LeftMenu_button__img\\" alt=\\"ControllerIcon\\" src=\\"controller.svg\\" />
+  </button>
+  <ForwardRef(SwipeableDrawer) disableDiscovery={true} anchor=\\"left\\" open={false} onClose={[Function]} onOpen={[Function]}>
+    <div className=\\"LeftMenu\\">
+      <ul className=\\"LeftMenu__links\\">
+        <li className=\\"LeftMenu__links__link\\">
+          <Link onClick={[Function]} to=\\"/game/csgo\\">
+            <img alt=\\"csgo\\" className=\\"LeftMenu__links__img\\" src=\\"csgo.png\\" />
+          </Link>
+        </li>
+        <li className=\\"LeftMenu__links__link\\">
+          <Link onClick={[Function]} to=\\"/game/valorant\\">
+            <img alt=\\"valorant\\" className=\\"LeftMenu__links__img\\" src=\\"valorant.png\\" />
+          </Link>
+        </li>
+      </ul>
+    </div>
+  </ForwardRef(SwipeableDrawer)>
+</Fragment>"
 `;
