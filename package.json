@@ -13,7 +13,7 @@
   },
   "scripts": {
     "dev": "react-scripts start",
-    "deploy": "yarn build && firebase deploy",
+    "deploy": "npm run build && firebase deploy",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
