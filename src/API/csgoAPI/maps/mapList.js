@@ -1,4 +1,4 @@
-const maps = [
+const mapList = [
   {
     key: 'de_cache',
     name: 'Cache'
@@ -37,4 +37,4 @@ const maps = [
   }
 ];
 
-export default maps;
+export default mapList;

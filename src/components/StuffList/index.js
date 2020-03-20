@@ -1,42 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
+
+import API from '../../API';
 
 import StuffCard from '../StuffCard';
 
-const stuffs = [
-  {
-    id: '9avd4ed',
-    title: 'Connector from T Spawn',
-    type: 'smoke',
-    videoId: 'kua_hX-l-V4' // youtube video ID
-  },
-  {
-    id: '9avd4ed',
-    title: 'Connector from T Spawn',
-    type: 'smoke',
-    videoId: 'kua_hX-l-V4' // youtube video ID
-  },
-  {
-    id: '9avd4ed',
-    title: 'Connector from T Spawn',
-    type: 'smoke',
-    videoId: 'kua_hX-l-V4' // youtube video ID
-  },
-  {
-    id: '9avd4ed',
-    title: 'Connector from T Spawn',
-    type: 'smoke',
-    videoId: 'kua_hX-l-V4' // youtube video ID
-  },
-  {
-    id: '9avd4ed',
-    title: 'Connector from T Spawn',
-    type: 'smoke',
-    videoId: 'kua_hX-l-V4' // youtube video ID
-  }
-];
+function StuffList({ match }) {
+  const { game, map } = match.params;
+  const stuffs = API[game].getStuffListByMapKey(map);
 
-function StuffList() {
   return (
     <ul className='StuffList'>
       {stuffs.map(stuff => (
@@ -50,4 +22,4 @@ function StuffList() {
   );
 }
 
-export default StuffList;
+export default withRouter(StuffList);

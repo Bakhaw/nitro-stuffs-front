@@ -4,12 +4,12 @@ import { shallow } from 'enzyme';
 import StuffCard from '.';
 
 test('should render properly', () => {
-  const stuff =   {
+  const stuff = {
     id: 'id',
     title: 'title',
-    type: 'type',
+    type: 'smoke',
     videoId: 'videoId' // youtube video ID
-  },
+  };
 
   const container = shallow(<StuffCard stuff={stuff} />);
   expect(container.debug()).toMatchSnapshot();
