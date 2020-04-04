@@ -1,15 +1,22 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { Link } from 'react-router-dom';
 
-import routes from './routes';
 import controllerIcon from '../../static/icons/controller.svg';
+import { StateContext } from '../../Context';
+import routes from './routes';
 
 function LeftMenu() {
+  const { toggleGame } = useContext(StateContext);
   const [open, setOpen] = useState(false);
 
   const toggleDrawer = open => () => {
     setOpen(open);
+  };
+
+  const onGameClick = game => () => {
+    setOpen(false);
+    toggleGame(game);
   };
 
   return (
@@ -30,13 +37,13 @@ function LeftMenu() {
       >
         <div className='LeftMenu'>
           <ul className='LeftMenu__links'>
-            {routes.map(({ img, to }, index) => (
+            {routes.map(({ gameKey, to }, index) => (
               <li className='LeftMenu__links__link' key={index}>
-                <Link onClick={toggleDrawer(false)} to={to}>
+                <Link onClick={onGameClick(gameKey)} to={to}>
                   <img
-                    alt={img}
+                    alt={gameKey}
                     className='LeftMenu__links__img'
-                    src={require(`../../static/images/${img}/game-icon/${img}.png`)}
+                    src={require(`../../static/images/${gameKey}/game-icon/${gameKey}.png`)}
                   />
                 </Link>
               </li>

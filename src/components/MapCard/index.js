@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
-function MapCard({ map, match }) {
-  const { game } = match.params;
+import { StateContext } from '../../Context';
+
+function MapCard({ map }) {
+  const { currentGame } = useContext(StateContext);
   const { key, name } = map;
 
   const [opacity, setOpacity] = useState(0.5);
 
-  const backgroundURL = require(`../../static/images/${game}/maps-previews/${key}.jpg`);
+  const backgroundURL = require(`../../static/images/${currentGame}/maps-previews/${key}.jpg`);
   const backgroundImage = `linear-gradient(rgb(0, 0, 0) 0, rgba(0, 0, 0, ${opacity}) 0), url(${backgroundURL})`;
 
   function onCardHover() {
@@ -22,7 +24,7 @@ function MapCard({ map, match }) {
       onMouseEnter={onCardHover}
       onMouseLeave={onCardHover}
       style={{ backgroundImage }}
-      to={`/game/${game}/${key}`}
+      to={`/game/${currentGame}/${key}`}
     >
       <h2 className='MapCard__text'>{name}</h2>
     </Link>
