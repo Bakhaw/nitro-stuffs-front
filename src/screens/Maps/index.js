@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
 import API from '../../API';
+import { StateContext } from '../../Context';
 
 import Loader from '../../components/Loader';
 import MapList from '../../components/MapList';
 
-function Maps({ match }) {
-  const { game } = match.params;
+function Maps() {
+  const { currentGame } = useContext(StateContext);
 
-  if (!API[game]) return <Loader />;
+  if (!API[currentGame]) return <Loader />;
 
-  const maps = API[game].getMapList();
+  const maps = API[currentGame].getMapList();
 
   return <MapList maps={maps} />;
 }

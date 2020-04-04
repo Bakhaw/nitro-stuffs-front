@@ -14,7 +14,7 @@ class StuffList extends Component {
 
     this.state = {
       activeFilters: ['smoke'],
-      activeStuffs: []
+      activeStuffs: [],
     };
   }
 
@@ -25,7 +25,7 @@ class StuffList extends Component {
     const activeStuffs = API[game].getStuffListByMapKey(map, activeFilters);
 
     this.setState({
-      activeStuffs
+      activeStuffs,
     });
   };
 
@@ -39,7 +39,7 @@ class StuffList extends Component {
     }
   }
 
-  handleFilterClick = filter => {
+  handleFilterClick = (filter) => {
     const { activeFilters } = this.state;
     let newFilters = [];
 
@@ -48,11 +48,11 @@ class StuffList extends Component {
       newFilters = [...activeFilters, filter.type];
     } else {
       // Sinon on lui nique sa race du tableau
-      newFilters = activeFilters.filter(d => d !== filter.type);
+      newFilters = activeFilters.filter((d) => d !== filter.type);
     }
 
     this.setState({
-      activeFilters: newFilters
+      activeFilters: newFilters,
     });
   };
 
@@ -62,7 +62,7 @@ class StuffList extends Component {
     return (
       <div className='StuffList'>
         <div className='StuffList__Filter'>
-          {filtersList.map(filter => (
+          {filtersList.map((filter) => (
             <Filter
               key={filter.type}
               active={activeFilters.includes(filter.type)}
@@ -73,7 +73,7 @@ class StuffList extends Component {
         </div>
         <div className='StuffList__Stuffs'>
           <ul className='StuffList__Stuffs__List'>
-            {activeStuffs.map(stuff => (
+            {activeStuffs.map((stuff) => (
               <li key={stuff.id}>
                 <Link to={`/game/csgo/stuff/${stuff.id}`}>
                   <StuffCard stuff={stuff} />
