@@ -6,6 +6,13 @@ test('should return a stuff list', () => {
   expect(getStuffListByMapKey('de_cache')).toEqual(result);
 });
 
+test('should return a stuff list with filter', () => {
+  const filter = ['smoke', 'flashbang'];
+  const result = getStuffListByMapKey('de_cache', filter);
+
+  expect(getStuffListByMapKey('de_cache', filter)).toEqual(result);
+});
+
 test('should return a stuff', () => {
   const result = getStuffById('de_cache', '9avd4e3d');
 

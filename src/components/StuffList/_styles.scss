@@ -1,11 +1,28 @@
 .StuffList {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 350px);
-  gap: 30px;
-  justify-content: center;
-  padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  &__Filter {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+    align-items: flex-end;
+  }
+  &__Stuffs {
+    display: flex;
+    flex: 10;
+    flex-direction: column;
+    &__List {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, 350px);
+      gap: 30px;
+      justify-content: center;
+      padding: 20px;
 
-  a {
-    text-decoration: none;
+      a {
+        text-decoration: none;
+      }
+    }
   }
 }
