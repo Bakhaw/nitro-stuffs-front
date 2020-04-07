@@ -1,0 +1,7 @@
+$screen-desktop: 1200px;
+
+@mixin desktop {
+  @media (min-width: #{$screen-desktop}) {
+    @content;
+  }
+}

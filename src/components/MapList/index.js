@@ -1,18 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-import maps from '../../maps';
 import MapCard from '../MapCard';
 
-function MapList() {
+function MapList({ maps }) {
   return (
-    <ul>
+    <div className='MapList'>
       {maps.map(map => (
-        <li key={map.key}>
-          <MapCard map={map} />
-        </li>
+        <MapCard key={map.key} map={map} />
       ))}
-    </ul>
+    </div>
   );
 }
+
+MapList.propTypes = {
+  maps: PropTypes.array.isRequired
+};
 
 export default MapList;

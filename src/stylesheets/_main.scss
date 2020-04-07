@@ -1,0 +1,26 @@
+html,
+body,
+main {
+  background: $BlueGrey;
+  min-height: $Content__Height;
+  min-width: $Content__Width;
+  padding: 0;
+  margin: 0;
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+#root {
+  min-height: $Content__Height;
+}
