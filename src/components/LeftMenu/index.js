@@ -13,7 +13,7 @@ function LeftMenu() {
   };
 
   return (
-    <React.Fragment>
+    <nav>
       <button className='LeftMenu_button' onClick={toggleDrawer(true)}>
         <img
           className='LeftMenu_button__img'
@@ -44,7 +44,7 @@ function LeftMenu() {
           </ul>
         </div>
       </SwipeableDrawer>
-    </React.Fragment>
+    </nav>
   );
 }
 

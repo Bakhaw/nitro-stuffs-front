@@ -1,5 +1,9 @@
 .Stuffs {
   display: flex;
-  flex: 1;
-  flex-direction: row;
+  flex-direction: column;
+  margin-top: 40px;
+
+  .BackButton {
+    margin-left: 40px;
+  }
 }

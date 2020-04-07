@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render properly 1`] = `
-"<Fragment>
+"<nav>
   <button className=\\"LeftMenu_button\\" onClick={[Function]}>
     <img className=\\"LeftMenu_button__img\\" alt=\\"ControllerIcon\\" src=\\"controller.svg\\" />
   </button>
@@ -21,5 +21,5 @@ exports[`should render properly 1`] = `
       </ul>
     </div>
   </ForwardRef(SwipeableDrawer)>
-</Fragment>"
+</nav>"
 `;
