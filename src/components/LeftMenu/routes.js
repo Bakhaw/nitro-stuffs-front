@@ -1,10 +1,10 @@
 const routes = [
   {
-    img: 'csgo',
+    gameKey: 'csgo',
     to: '/game/csgo'
   },
   {
-    img: 'valorant',
+    gameKey: 'valorant',
     to: '/game/valorant'
   }
 ];
