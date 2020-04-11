@@ -1,11 +1,7 @@
-import csgoAPI from './csgoAPI';
-import { getMapList } from './valorantAPI';
+import methods from './methods';
 
 const API = {
-  csgo: csgoAPI,
-  valorant: {
-    getMapList
-  }
+  methods,
 };
 
 export default API;

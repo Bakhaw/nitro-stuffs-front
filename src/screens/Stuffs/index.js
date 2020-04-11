@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import BackButton from '../../components/BackButton';
 import FilterList from '../../components/FiltersList';
@@ -17,11 +17,10 @@ function Stuffs({ match }) {
     getStuffs();
   }, [activeFilters]);
 
-  if (currentGame === 'valorant') return <p>Valorant coming soon...</p>;
-
   function getStuffs() {
     const { map } = match.params;
-    const activeStuffs = API[currentGame].getStuffListByMapKey(
+    const activeStuffs = API.methods.getStuffListByMapKey(
+      currentGame,
       map,
       activeFilters
     );
