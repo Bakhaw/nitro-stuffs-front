@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+"<ul className=\\"FiltersList\\">
+  <li>
+    <Filter active={true} filter={{...}} handleFilterClick={[Function: mockConstructor]} />
+  </li>
+  <li>
+    <Filter active={false} filter={{...}} handleFilterClick={[Function: mockConstructor]} />
+  </li>
+  <li>
+    <Filter active={false} filter={{...}} handleFilterClick={[Function: mockConstructor]} />
+  </li>
+</ul>"
+`;

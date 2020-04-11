@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 
-function Filter({ active = false, filter, handleFilterClick, match }) {
-  const { game } = match.params;
+import { StateContext } from '../../Context';
 
-  const backgroundURL = require(`../../static/images/${game}/stuff-icons/${filter.type}.svg`);
+function Filter({ active = false, filter, handleFilterClick }) {
+  const { currentGame } = useContext(StateContext);
+
+  const backgroundURL = require(`../../static/images/${currentGame}/stuff-icons/${filter.type}.svg`);
   const backgroundImage = `url(${backgroundURL})`;
 
   return (
@@ -23,4 +24,4 @@ Filter.propTypes = {
   handleFilterClick: PropTypes.func.isRequired,
 };
 
-export default withRouter(Filter);
+export default Filter;
