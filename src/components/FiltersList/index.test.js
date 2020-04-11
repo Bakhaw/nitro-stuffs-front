@@ -1,21 +1,14 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { StateProvider } from '../../Context';
-
-import Filter from '.';
+import FiltersList from '.';
 
 test('should render properly', () => {
   const props = {
-    active: false,
-    filter: {},
+    activeFilters: ['smoke'],
     handleFilterClick: jest.fn(),
   };
 
-  const container = shallow(
-    <StateProvider>
-      <Filter {...props} />
-    </StateProvider>
-  );
+  const container = shallow(<FiltersList {...props} />);
   expect(container.debug()).toMatchSnapshot();
 });
