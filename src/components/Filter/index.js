@@ -20,7 +20,7 @@ function Filter({ active = false, filter, handleFilterClick, match }) {
 Filter.propTypes = {
   active: PropTypes.bool,
   filter: PropTypes.object.isRequired,
-  handleFilterClick: PropTypes.func.isRequired
+  handleFilterClick: PropTypes.func.isRequired,
 };
 
 export default withRouter(Filter);
