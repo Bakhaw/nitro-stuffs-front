@@ -1,11 +1,12 @@
 import { getMapByKey, getMapList } from './maps';
 import { getStuffById, getStuffListByMapKey } from './stuffs';
 
-const csgoAPI = {
+/** All generic methods that will be used for CS:GO and Valorant */
+const methods = {
   getMapByKey,
   getMapList,
   getStuffById,
-  getStuffListByMapKey
+  getStuffListByMapKey,
 };
 
-export default csgoAPI;
+export default methods;

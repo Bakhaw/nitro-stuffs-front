@@ -1,40 +1,40 @@
 const mapList = [
   {
     key: 'de_cache',
-    name: 'Cache'
+    name: 'Cache',
   },
   {
     key: 'de_cobblestone',
-    name: 'Cobblestone'
+    name: 'Cobblestone',
   },
   {
     key: 'de_dust2',
-    name: 'Dust II'
+    name: 'Dust II',
   },
   {
     key: 'de_inferno',
-    name: 'Inferno'
+    name: 'Inferno',
   },
   {
     key: 'de_mirage',
-    name: 'Mirage'
+    name: 'Mirage',
   },
   {
     key: 'de_nuke',
-    name: 'Nuke'
+    name: 'Nuke',
   },
   {
     key: 'de_overpass',
-    name: 'Overpass'
+    name: 'Overpass',
   },
   {
     key: 'de_train',
-    name: 'Train'
+    name: 'Train',
   },
   {
     key: 'de_vertigo',
-    name: 'Vertigo'
-  }
+    name: 'Vertigo',
+  },
 ];
 
 export default mapList;
