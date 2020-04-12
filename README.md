@@ -1,6 +1,6 @@
 # Nitro Stuffs
 
-[Official link](https://csgo-nitro-stuffs.web.app/game/csgo)
+[Official link](https://nitro-stuffs.web.app/)
 
 ## Description
 
