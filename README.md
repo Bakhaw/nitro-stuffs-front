@@ -1,16 +1,16 @@
-# CS:GO - Nitro Stuffs
+# Nitro Stuffs
 
 [Official link](https://csgo-nitro-stuffs.web.app/game/csgo)
 
 ## Description
 
-Utility tool giving access to multiple stuffs videos (smokes, flashes, etc...) on CS:GO
+Utility tool giving access to multiple stuffs videos (smokes, flashes, etc...) on CS:GO and Valorant
 
 ## Setup
 
 ```sh
-git clone https://github.com/Bakhaw/csgo-nitro-stuffs.git
-cd csgo-nitro-stuffs/
+git clone https://github.com/Bakhaw/nitro-stuffs-front.git
+cd nitro-stuffs-front/
 npm install
 npm run dev
 
