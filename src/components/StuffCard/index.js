@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import Image from '../Image';
+
 function StuffCard({ stuff }) {
   const { title, type, videoId } = stuff;
 
   return (
     <div className='StuffCard'>
-      <div className='StuffCard__header'>
-        <img
-          alt={`${type} icon`}
-          src={require(`../../static/images/csgo/stuff-icons/${type}.svg`)}
-        />
-        <span>{title}</span>
+      <div className={`StuffCard__header`}>
+        <Image width='35' height='35' iconType={type} />
+        <span className={`StuffCard__header__title__${type}`}>{title}</span>
       </div>
       <iframe
         allowFullScreen
@@ -26,7 +25,7 @@ function StuffCard({ stuff }) {
 }
 
 StuffCard.propTypes = {
-  stuff: PropTypes.object.isRequired
+  stuff: PropTypes.object.isRequired,
 };
 
 export default StuffCard;

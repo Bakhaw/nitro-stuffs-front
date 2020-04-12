@@ -1,20 +1,16 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-import { StateContext } from '../../Context';
+import Image from '../Image';
 
 function Filter({ active = false, filter, handleFilterClick }) {
-  const { currentGame } = useContext(StateContext);
-
-  const backgroundURL = require(`../../static/images/${currentGame}/stuff-icons/${filter.type}.svg`);
-  const backgroundImage = `url(${backgroundURL})`;
-
   return (
     <div
       className={`Filter ${active ? 'Filter-active' : ''}`}
       onClick={() => handleFilterClick(filter)}
-      style={{ backgroundImage }}
-    />
+    >
+      <Image width='50' height='50' iconType={filter.type} />
+    </div>
   );
 }
 

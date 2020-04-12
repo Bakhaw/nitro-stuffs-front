@@ -2,19 +2,22 @@
   cursor: pointer;
   background: none;
   border: none;
-  margin-top: 10px;
-  margin-left: 40px;
+  margin: 30px;
   padding: 0;
 
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+  }
+
   &__img {
-    fill: $White;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
   }
 }
 
 .LeftMenu {
-  background: $Blue;
+  background: $Secondary;
   width: $LeftMenu__Width;
   height: $LeftMenu__Height;
 

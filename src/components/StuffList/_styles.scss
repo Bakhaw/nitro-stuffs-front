@@ -1,4 +1,11 @@
 .StuffList {
+  display: flex;
+  flex: 8;
+  flex-direction: column;
+  &__Title {
+    margin-bottom: 45px;
+    color: $White;
+  }
   &__Stuffs {
     display: grid;
     grid-template-columns: repeat(auto-fill, 350px);

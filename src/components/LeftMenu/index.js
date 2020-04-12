@@ -10,11 +10,11 @@ function LeftMenu() {
   const { toggleGame } = useContext(StateContext);
   const [open, setOpen] = useState(false);
 
-  const toggleDrawer = open => () => {
+  const toggleDrawer = (open) => () => {
     setOpen(open);
   };
 
-  const onGameClick = game => () => {
+  const onGameClick = (game) => () => {
     setOpen(false);
     toggleGame(game);
   };
