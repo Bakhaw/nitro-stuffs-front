@@ -1,9 +1,18 @@
 .BackButton {
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   img {
-    width: 100%;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 25px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.2s;
+    }
   }
 }
