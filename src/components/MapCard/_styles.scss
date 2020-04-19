@@ -3,20 +3,8 @@
   border-radius: 6px;
   width: $MapCard__Width;
   height: $MapCard__Height;
-
-  &__active {
-    cursor: pointer;
-
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.29), 0 5px 5px rgba(0, 0, 0, 0.06);
-  }
-
-  &__inactive {
-    pointer-events: none;
-    cursor: default;
-    opacity: 0.5;
-  }
-
-  // background-image is set in ChampionCard component
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  // background-image is set in <MapCard /> component
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -31,5 +19,17 @@
     align-items: flex-end;
     margin: 15px;
     color: $White;
+  }
+
+  &__active {
+    cursor: pointer;
+
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.29), 0 5px 5px rgba(0, 0, 0, 0.06);
+  }
+
+  &__inactive {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
   }
 }

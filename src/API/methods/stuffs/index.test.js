@@ -2,7 +2,14 @@ import { getStuffById, getStuffListByMapKey } from '.';
 
 import csgoStuffs from '../../static/stuffs/csgoStuffs';
 
-test('should return a stuff list', () => {
+test('should return full stuff list when filters array is empty', () => {
+  const result = csgoStuffs['de_cache'];
+  const filters = [];
+
+  expect(getStuffListByMapKey('csgo', 'de_cache', filters)).toEqual(result);
+});
+
+test('should return a stuff list with flashbang, molotov and smoke', () => {
   const result = csgoStuffs['de_cache'];
   const filters = ['flashbang', 'molotov', 'smoke'];
 

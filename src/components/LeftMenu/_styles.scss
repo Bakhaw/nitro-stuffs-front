@@ -4,10 +4,11 @@
   border: none;
   margin: 30px;
   padding: 0;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
   &:hover {
     transform: scale(1.1);
-    transition: 0.2s;
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
   &__img {
@@ -34,11 +35,11 @@
     &__img {
       width: 60px;
       height: 60px;
-      transition: 0.2s;
+      transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
       &:hover {
         transform: scale(1.1);
-        transition: 0.2s;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
       }
     }
   }
