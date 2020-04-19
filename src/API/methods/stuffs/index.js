@@ -11,7 +11,12 @@ const stuffs = {
  * @param {Array} filters - The filters stuffs (example : ['smoke', 'flashbang'])
  */
 export function getStuffListByMapKey(game, mapKey, filters = []) {
-  return stuffs[game][mapKey].filter((stuff) => filters.includes(stuff.type));
+  const mapStuffs = stuffs[game][mapKey];
+
+  // if no filters is selected, display all videos
+  if (filters.length === 0) return mapStuffs;
+
+  return mapStuffs.filter((stuff) => filters.includes(stuff.type));
 }
 
 /** Get a stuff using a map key and a stuff ID

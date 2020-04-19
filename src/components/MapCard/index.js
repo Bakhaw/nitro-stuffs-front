@@ -8,14 +8,14 @@ function MapCard({ map }) {
   const { currentGame } = useContext(StateContext);
   const { key, name, active } = map;
 
-  const [opacity, setOpacity] = useState(0.5);
+  const [opacity, setOpacity] = useState(0.3);
 
   const backgroundURL = require(`../../static/images/${currentGame}/maps-previews/${key}.jpg`);
-  const backgroundImage = `url(${backgroundURL})`;
+  const backgroundImage = `linear-gradient(rgb(0, 0, 0) 0, rgba(0, 0, 0, ${opacity}) 0), url(${backgroundURL})`;
 
   function onCardHover() {
     if (active) {
-      const newOpacity = opacity === 0.5 ? 0.1 : 0.5;
+      const newOpacity = opacity === 0.3 ? 0.1 : 0.3;
       setOpacity(newOpacity);
     }
   }

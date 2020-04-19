@@ -10,7 +10,7 @@ import { StateContext } from '../../Context';
 function Stuffs({ match }) {
   const { currentGame } = useContext(StateContext);
 
-  const [activeFilters, setActiveFilters] = useState(['smoke']);
+  const [activeFilters, setActiveFilters] = useState([]);
   const [activeStuffs, setActiveStuffs] = useState([]);
 
   useEffect(() => {
