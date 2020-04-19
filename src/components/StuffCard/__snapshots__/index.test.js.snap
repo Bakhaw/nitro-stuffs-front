@@ -3,8 +3,8 @@
 exports[`should render properly 1`] = `
 "<div className=\\"StuffCard\\">
   <div className=\\"StuffCard__header\\">
-    <img alt=\\"smoke icon\\" src={{...}} />
-    <span>
+    <Image width=\\"35\\" height=\\"35\\" iconType=\\"smoke\\" />
+    <span className=\\"StuffCard__header__title__smoke\\">
       title
     </span>
   </div>
