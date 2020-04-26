@@ -6,12 +6,10 @@ import { StateContext } from '../../Context';
 
 function MapCard({ map }) {
   const { currentGame } = useContext(StateContext);
-  const { key, name, active } = map;
-
   const [opacity, setOpacity] = useState(0.3);
 
-  const backgroundURL = require(`../../static/images/${currentGame}/maps-previews/${key}.jpg`);
-  const backgroundImage = `linear-gradient(rgb(0, 0, 0) 0, rgba(0, 0, 0, ${opacity}) 0), url(${backgroundURL})`;
+  const { key, name, active } = map;
+  const backgroundImage = `linear-gradient(rgb(0, 0, 0) 0, rgba(0, 0, 0, ${opacity}) 0), url(${map.image})`;
 
   function onCardHover() {
     if (active) {

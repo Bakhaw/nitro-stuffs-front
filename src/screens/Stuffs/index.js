@@ -4,7 +4,7 @@ import BackButton from '../../components/BackButton';
 import FilterList from '../../components/FiltersList';
 import StuffList from '../../components/StuffList';
 
-import API from '../../API';
+import { fetchStuffListByMapKey } from '../../API/methods/stuffs';
 import { StateContext } from '../../Context';
 
 function Stuffs({ match }) {
@@ -17,9 +17,9 @@ function Stuffs({ match }) {
     getStuffs();
   }, [activeFilters]);
 
-  function getStuffs() {
+  async function getStuffs() {
     const { map } = match.params;
-    const activeStuffs = API.methods.getStuffListByMapKey(
+    const activeStuffs = await fetchStuffListByMapKey(
       currentGame,
       map,
       activeFilters
