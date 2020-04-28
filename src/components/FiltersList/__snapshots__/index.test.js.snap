@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+"<div className=\\"FiltersList\\">
+  <h3 className=\\"FiltersList__Title\\">
+    FILTERS
+  </h3>
+  <ul className=\\"FiltersList__Filters\\">
+    <li>
+      <Filter active={true} filter={{...}} handleFilterClick={[Function: mockConstructor]} />
+    </li>
+    <li>
+      <Filter active={false} filter={{...}} handleFilterClick={[Function: mockConstructor]} />
+    </li>
+    <li>
+      <Filter active={false} filter={{...}} handleFilterClick={[Function: mockConstructor]} />
+    </li>
+  </ul>
+</div>"
+`;

@@ -1,17 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
-import API from '../../API';
+import { fetchMapList } from '../../API/methods/maps';
 import { StateContext } from '../../Context';
 
-import Loader from '../../components/Loader';
 import MapList from '../../components/MapList';
 
-function Maps() {
-  const { currentGame } = useContext(StateContext);
+function Maps({ match }) {
+  const { currentGame, toggleGame } = useContext(StateContext);
+  const [maps, setMaps] = useState([]);
 
-  if (!API[currentGame]) return <Loader />;
+  useEffect(() => {
+    getMaps();
+  }, [currentGame]);
 
-  const maps = API[currentGame].getMapList();
+  async function getMaps() {
+    toggleGame(match.params.game);
+
+    const maps = await fetchMapList(currentGame);
+    setMaps(maps);
+  }
 
   return <MapList maps={maps} />;
 }

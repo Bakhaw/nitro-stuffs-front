@@ -1,26 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
 
-function Filter({ active = false, filter, handleFilterClick, match }) {
-  const { game } = match.params;
+import Image from '../Image';
 
-  const backgroundURL = require(`../../static/images/${game}/stuff-icons/${filter.type}.svg`);
-  const backgroundImage = `url(${backgroundURL})`;
-
+function Filter({ active = false, filter, handleFilterClick }) {
   return (
     <div
       className={`Filter ${active ? 'Filter-active' : ''}`}
       onClick={() => handleFilterClick(filter)}
-      style={{ backgroundImage }}
-    />
+    >
+      <Image width='50' height='50' iconType={filter.type} />
+    </div>
   );
 }
 
 Filter.propTypes = {
   active: PropTypes.bool,
   filter: PropTypes.object.isRequired,
-  handleFilterClick: PropTypes.func.isRequired
+  handleFilterClick: PropTypes.func.isRequired,
 };
 
-export default withRouter(Filter);
+export default Filter;

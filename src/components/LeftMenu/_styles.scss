@@ -2,19 +2,23 @@
   cursor: pointer;
   background: none;
   border: none;
-  margin-top: 10px;
-  margin-left: 40px;
+  margin: 30px;
   padding: 0;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
 
   &__img {
-    fill: $White;
-    width: 40px;
-    height: 40px;
+    width: 55px;
+    height: 55px;
   }
 }
 
 .LeftMenu {
-  background: $Blue;
+  background: $Secondary;
   width: $LeftMenu__Width;
   height: $LeftMenu__Height;
 
@@ -31,11 +35,11 @@
     &__img {
       width: 60px;
       height: 60px;
-      transition: 0.2s;
+      transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
       &:hover {
         transform: scale(1.1);
-        transition: 0.2s;
+        transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
       }
     }
   }

@@ -9,8 +9,8 @@ function BackButton({ history }) {
   }
 
   return (
-    <div className='BackButton' onClick={handleClick}>
-      <img alt='Left Arrow' src={LeftArrowIcon} />
+    <div className='BackButton'>
+      <img alt='Left Arrow' onClick={handleClick} src={LeftArrowIcon} />
     </div>
   );
 }

@@ -1,27 +1,19 @@
 .StuffList {
   display: flex;
-  flex: 1;
-  flex-direction: row;
-  margin: 30px 0;
-
-  &__Filter {
-    margin-left: 40px;
+  flex: 8;
+  flex-direction: column;
+  &__Title {
+    margin-bottom: 45px;
+    color: $White;
   }
-
   &__Stuffs {
-    display: flex;
-    flex: 10;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    gap: 30px;
+    width: 100%;
 
-    &__List {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 350px);
-      gap: 30px;
-      justify-content: center;
-
-      a {
-        text-decoration: none;
-      }
+    a {
+      text-decoration: none;
     }
   }
 }

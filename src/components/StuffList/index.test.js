@@ -4,6 +4,10 @@ import { shallow } from 'enzyme';
 import StuffList from '.';
 
 test('should render properly', () => {
-  const container = shallow(<StuffList />);
+  const props = {
+    activeStuffs: [],
+  };
+
+  const container = shallow(<StuffList {...props} />);
   expect(container.debug()).toMatchSnapshot();
 });

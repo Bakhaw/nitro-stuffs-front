@@ -1,7 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render properly 1`] = `
-"<ContextConsumer>
-  [function]
-</ContextConsumer>"
+"<div className=\\"StuffList\\">
+  <div className=\\"StuffList__Title\\">
+    <h1>
+      MIRAGE
+    </h1>
+  </div>
+  <ul className=\\"StuffList__Stuffs\\" />
+</div>"
 `;

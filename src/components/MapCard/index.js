@@ -6,21 +6,21 @@ import { StateContext } from '../../Context';
 
 function MapCard({ map }) {
   const { currentGame } = useContext(StateContext);
-  const { key, name } = map;
+  const [opacity, setOpacity] = useState(0.3);
 
-  const [opacity, setOpacity] = useState(0.5);
-
-  const backgroundURL = require(`../../static/images/${currentGame}/maps-previews/${key}.jpg`);
-  const backgroundImage = `linear-gradient(rgb(0, 0, 0) 0, rgba(0, 0, 0, ${opacity}) 0), url(${backgroundURL})`;
+  const { key, name, active } = map;
+  const backgroundImage = `linear-gradient(rgb(0, 0, 0) 0, rgba(0, 0, 0, ${opacity}) 0), url(${map.image})`;
 
   function onCardHover() {
-    const newOpacity = opacity === 0.5 ? 0.1 : 0.5;
-    setOpacity(newOpacity);
+    if (active) {
+      const newOpacity = opacity === 0.3 ? 0.1 : 0.3;
+      setOpacity(newOpacity);
+    }
   }
 
   return (
     <Link
-      className='MapCard'
+      className={`MapCard ${active ? 'MapCard__active' : 'MapCard__inactive'}`}
       onMouseEnter={onCardHover}
       onMouseLeave={onCardHover}
       style={{ backgroundImage }}
