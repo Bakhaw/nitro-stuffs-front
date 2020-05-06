@@ -2,7 +2,7 @@ import React from 'react';
 
 import svgIcons from '../../static/icons';
 
-function Image({ width, height, iconType, fill }) {
+function Image({ width, height, iconType, fill, style }) {
   const svgIcon = svgIcons.filter((icon) => icon.type === iconType)[0];
   return (
     <svg
@@ -10,8 +10,11 @@ function Image({ width, height, iconType, fill }) {
       height={height}
       viewBox='0 0 55 55'
       xmlns='http://www.w3.org/2000/svg'
+      style={style}
     >
-      <path d={svgIcon.d} fill={fill ? fill : svgIcon.defaultFill} />
+      {svgIcon.d.map((d) => (
+        <path key={d} d={d} fill={fill ? fill : svgIcon.defaultFill} />
+      ))}
     </svg>
   );
 }

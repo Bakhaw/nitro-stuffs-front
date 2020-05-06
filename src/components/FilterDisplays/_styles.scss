@@ -1,0 +1,16 @@
+.FilterDisplays {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+  align-items: center;
+
+  &__Image {
+    opacity: 0.5;
+    cursor: pointer;
+    margin: 10px;
+  }
+
+  &__ImageActive {
+    opacity: 1;
+  }
+}

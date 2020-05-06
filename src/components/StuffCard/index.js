@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import Image from '../Image';
 
-function StuffCard({ stuff }) {
-  const { title, type, videoId } = stuff;
+function StuffCard({ stuff, type }) {
+  const { title, videoId } = stuff;
 
   return (
     <div className='StuffCard'>
@@ -26,6 +26,7 @@ function StuffCard({ stuff }) {
 
 StuffCard.propTypes = {
   stuff: PropTypes.object.isRequired,
+  type: PropTypes.string.isRequired,
 };
 
 export default StuffCard;
