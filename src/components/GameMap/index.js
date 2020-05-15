@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import mirage from '../../static/images/csgo/maps-callouts/mirage.jpg';
 import Marker from '../Marker';
@@ -108,5 +109,9 @@ function GameMap({ activeStuffs }) {
     </div>
   );
 }
+
+GameMap.propTypes = {
+  activeStuffs: PropTypes.array.isRequired,
+};
 
 export default GameMap;

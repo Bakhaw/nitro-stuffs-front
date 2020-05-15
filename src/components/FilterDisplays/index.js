@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Image from '../Image';
 
@@ -39,5 +40,10 @@ function FilterDisplays({ isDefaultDisplay, handleFilterDisplaysClick }) {
     </div>
   );
 }
+
+FilterDisplays.propTypes = {
+  handleFilterDisplaysClick: PropTypes.func.isRequired,
+  isDefaultDisplay: PropTypes.bool.isRequired,
+};
 
 export default FilterDisplays;

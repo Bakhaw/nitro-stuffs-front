@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import svgIcons from '../../static/icons';
 
@@ -18,5 +19,13 @@ function Image({ width, height, iconType, fill, style }) {
     </svg>
   );
 }
+
+Image.propTypes = {
+  width: PropTypes.string.isRequired,
+  height: PropTypes.string.isRequired,
+  iconType: PropTypes.string.isRequired,
+  fill: PropTypes.string,
+  style: PropTypes.array,
+};
 
 export default Image;
