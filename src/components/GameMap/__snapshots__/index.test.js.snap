@@ -10,7 +10,7 @@ exports[`should render properly 1`] = `
   <div className=\\"GameMap__Content\\">
     <div className=\\"GameMap__Content__Map\\" style={{...}}>
       <img className=\\"GameMap__Content__Map__Shadow\\" alt=\\"Mirage\\" src=\\"mirage.jpg\\" />
-      <Marker additionalStyles={{...}} x={640} y={15} height=\\"35\\" width=\\"35\\" onClick={[Function: onClick]} type=\\"close\\" />
+      <MarkerList allVideos={{...}} isSelectedStuff={true} stuffShown={{...}} handleClickShowAllStuff={[Function: handleClickShowAllStuff]} handleClickStuffSelected={[Function: handleClickStuffSelected]} handleClickVideoSelected={[Function: handleClickVideoSelected]} />
     </div>
     <div className=\\"GameMap__Content__Video\\">
       <p className=\\"GameMap__Content__Video__Paragraphe\\">

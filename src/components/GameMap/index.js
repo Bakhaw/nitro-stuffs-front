@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import mirage from '../../static/images/csgo/maps-callouts/mirage.jpg';
-import Marker from '../Marker';
+import MarkerList from '../MarkerList';
 import StuffCard from '../StuffCard';
 
 function GameMap({ activeStuffs }) {
@@ -23,6 +23,7 @@ function GameMap({ activeStuffs }) {
     showStuff();
   }, [stuffShown, stuffSelected, activeStuffs]);
 
+  //Stuff to show on the screen: the selected one (stuffSelected) or the default one (activeStuffs: with the filters)
   function showStuff() {
     if (stuffSelected.length) {
       setStuffShown(stuffSelected);
@@ -33,16 +34,22 @@ function GameMap({ activeStuffs }) {
     }
   }
 
+  //Handle click function : Called when a stuff is selected
+  //Store the stuff selected marker (calling the useEffect showStuff()), and the markers for all the videos
   function handleClickStuffSelected(stuff) {
     setStuffSelected([stuff]);
     setStuffSelectedType(stuff.type);
     setAllVideos(stuff.stuffPositions);
   }
 
+  //Handle click function : Called when a video marker is selected
+  //Store the video selected to show
   function handleClickVideoSelected(videoSelecteds) {
     setVideoSelected(videoSelecteds);
   }
 
+  //Handle click function : Called when you want to remove the selections made
+  //Reset all selections made and show the default stuffs (activeStuffs: with the filters)
   function handleClickShowAllStuff() {
     setStuffSelected([]);
     setStuffSelectedType('');
@@ -64,37 +71,14 @@ function GameMap({ activeStuffs }) {
             alt='Mirage'
             src={mirage}
           />
-          <Marker
-            additionalStyles={{ display: isSelectedStuff ? 'block' : 'none' }}
-            x={parseInt(640)}
-            y={parseInt(15)}
-            height='35'
-            width='35'
-            onClick={() => handleClickShowAllStuff()}
-            type='close'
+          <MarkerList
+            allVideos={allVideos}
+            isSelectedStuff={isSelectedStuff}
+            stuffShown={stuffShown}
+            handleClickShowAllStuff={handleClickShowAllStuff}
+            handleClickStuffSelected={handleClickStuffSelected}
+            handleClickVideoSelected={handleClickVideoSelected}
           />
-          {stuffShown.map((stuff) => (
-            <Marker
-              key={stuff.id}
-              x={stuff.x}
-              y={stuff.y}
-              height='35'
-              width='35'
-              onClick={() => handleClickStuffSelected(stuff)}
-              type={stuff.type}
-            />
-          ))}
-          {allVideos.map((stuffSelected) => (
-            <Marker
-              key={stuffSelected.id}
-              x={stuffSelected.x}
-              y={stuffSelected.y}
-              height='50'
-              width='50'
-              onClick={() => handleClickVideoSelected(stuffSelected)}
-              type='position'
-            />
-          ))}
         </div>
         <div className='GameMap__Content__Video'>
           {videoSelected ? (
