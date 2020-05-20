@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+"<div className=\\"GameMap\\">
+  <div className=\\"GameMap__Title\\">
+    <h1>
+      MIRAGE
+    </h1>
+  </div>
+  <div className=\\"GameMap__Content\\">
+    <div className=\\"GameMap__Content__Map\\" style={{...}}>
+      <img className=\\"GameMap__Content__Map__Shadow\\" alt=\\"Mirage\\" src=\\"mirage.jpg\\" />
+      <MarkerList allVideos={{...}} isSelectedStuff={true} stuffShown={{...}} handleClickShowAllStuff={[Function: handleClickShowAllStuff]} handleClickStuffSelected={[Function: handleClickStuffSelected]} handleClickVideoSelected={[Function: handleClickVideoSelected]} />
+    </div>
+    <div className=\\"GameMap__Content__Video\\">
+      <p className=\\"GameMap__Content__Video__Paragraphe\\">
+        Select a video on the map
+      </p>
+    </div>
+  </div>
+</div>"
+`;

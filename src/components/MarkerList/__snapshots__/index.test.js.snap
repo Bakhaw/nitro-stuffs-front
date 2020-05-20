@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+"<div>
+  <Marker additionalStyles={{...}} x={640} y={15} height=\\"35\\" width=\\"35\\" onClick={[Function: onClick]} type=\\"close\\" />
+  <Marker x={157} y={250} height=\\"35\\" width=\\"35\\" onClick={[Function: onClick]} type=\\"flashbang\\" />
+  <Marker x={254} y={66} height=\\"50\\" width=\\"50\\" onClick={[Function: onClick]} type=\\"position\\" />
+  <Marker x={602} y={352} height=\\"50\\" width=\\"50\\" onClick={[Function: onClick]} type=\\"position\\" />
+</div>"
+`;
