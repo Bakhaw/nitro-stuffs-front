@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import LeftArrowIcon from '../../static/icons/left-arrow.svg';
+import Image from '../Image';
 
 function BackButton({ history }) {
   function handleClick() {
@@ -9,8 +9,10 @@ function BackButton({ history }) {
   }
 
   return (
-    <div className='BackButton'>
-      <img alt='Left Arrow' onClick={handleClick} src={LeftArrowIcon} />
+    <div className='BackButton' onClick={handleClick}>
+      <div className='BackButton__button'>
+        <Image width='35' height='35' iconType='left-arrow' />
+      </div>
     </div>
   );
 }
