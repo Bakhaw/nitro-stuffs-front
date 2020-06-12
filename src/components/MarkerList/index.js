@@ -15,8 +15,8 @@ function MarkerList({
     <div>
       <Marker
         additionalStyles={{ display: isSelectedStuff ? 'block' : 'none' }}
-        x={parseInt(640)}
-        y={parseInt(15)}
+        x='90%'
+        y='5%'
         height='35'
         width='35'
         onClick={() => handleClickShowAllStuff()}
@@ -25,8 +25,8 @@ function MarkerList({
       {stuffShown.map((stuff) => (
         <Marker
           key={stuff.id}
-          x={stuff.x}
-          y={stuff.y}
+          x={`${(stuff.x * 100) / 750}%`}
+          y={`${(stuff.y * 100) / 720}%`}
           height='35'
           width='35'
           onClick={() => handleClickStuffSelected(stuff)}
@@ -36,8 +36,8 @@ function MarkerList({
       {allVideos.map((stuffSelected) => (
         <Marker
           key={stuffSelected.id}
-          x={stuffSelected.x}
-          y={stuffSelected.y}
+          x={`${(stuffSelected.x * 100) / 750}%`}
+          y={`${(stuffSelected.y * 100) / 720}%`}
           height='50'
           width='50'
           onClick={() => handleClickVideoSelected(stuffSelected)}

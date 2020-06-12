@@ -16,6 +16,12 @@
     &__Map {
       display: flex;
       flex: 1;
+      img {
+        width: 100%;
+        max-width: $CalloutMap__MaxWidth;
+        height: 100%;
+        max-height: $CalloutMap__MaxHeight;
+      }
       &__Shadow {
         opacity: 0.3;
       }

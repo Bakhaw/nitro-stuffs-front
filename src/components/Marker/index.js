@@ -22,8 +22,8 @@ function Marker({ additionalStyles, x, y, height, width, onClick, type }) {
 
 Marker.propTypes = {
   additionalStyles: PropTypes.object,
-  x: PropTypes.number.isRequired,
-  y: PropTypes.number.isRequired,
+  x: PropTypes.string.isRequired,
+  y: PropTypes.string.isRequired,
   height: PropTypes.string,
   width: PropTypes.string,
   onClick: PropTypes.func.isRequired,

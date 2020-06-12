@@ -2,6 +2,6 @@
 
 exports[`should render properly 1`] = `
 "<div className=\\"Marker\\" style={{...}} onClick={[Function: mockConstructor]}>
-  <Image width={50} height={50} iconType=\\"position\\" />
+  <Image width=\\"50\\" height=\\"50\\" iconType=\\"position\\" />
 </div>"
 `;

@@ -54,7 +54,7 @@ function Stuffs({ match }) {
     <div className='Stuffs'>
       <BackButton />
       {isDefaultDisplay ? (
-        <GameMap activeStuffs={activeStuffs} />
+        <GameMap activeStuffs={activeStuffs} map={match.params.map} />
       ) : (
         <StuffList activeStuffs={activeStuffs} />
       )}
