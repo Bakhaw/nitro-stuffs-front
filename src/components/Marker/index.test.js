@@ -5,8 +5,8 @@ import Marker from '.';
 
 test('should render properly', () => {
   const props = {
-    x: 15,
-    y: 250,
+    x: '15',
+    y: '250',
     height: '50',
     width: '50',
     onClick: jest.fn(),

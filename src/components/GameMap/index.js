@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
-import mirage from '../../static/images/csgo/maps-callouts/mirage.jpg';
 import MarkerList from '../MarkerList';
 import StuffCard from '../StuffCard';
+import { StateContext } from '../../Context';
 
-function GameMap({ activeStuffs }) {
+function GameMap({ activeStuffs, map }) {
+  const { currentGame } = useContext(StateContext);
+
   //All Stuff to show with filter
   const [stuffShown, setStuffShown] = useState([]);
   //Stuff selected to show all videos associated
@@ -69,7 +71,7 @@ function GameMap({ activeStuffs }) {
               isSelectedStuff ? 'GameMap__Content__Map__Shadow' : ''
             }`}
             alt='Mirage'
-            src={mirage}
+            src={require(`../../static/images/${currentGame}/maps-callouts/${map}.jpg`)}
           />
           <MarkerList
             allVideos={allVideos}
@@ -96,6 +98,7 @@ function GameMap({ activeStuffs }) {
 
 GameMap.propTypes = {
   activeStuffs: PropTypes.array.isRequired,
+  map: PropTypes.string.isRequired,
 };
 
 export default GameMap;
