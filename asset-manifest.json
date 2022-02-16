@@ -1,15 +1,25 @@
 {
   "files": {
-    "main.css": "/nitro-stuffs-front/static/css/main.8513e5c4.css",
-    "main.js": "/nitro-stuffs-front/static/js/main.66b5a225.js",
-    "static/media/controller.svg": "/nitro-stuffs-front/static/media/controller.5a2420202070631205937e53a25bbbc9.svg",
+    "main.css": "/nitro-stuffs-front/static/css/main.d50d886b.css",
+    "main.js": "/nitro-stuffs-front/static/js/main.39f9a6b2.js",
+    "static/media/de_dust2.jpg": "/nitro-stuffs-front/static/media/de_dust2.59a29599be214b900d76.jpg",
+    "static/media/de_vertigo.jpg": "/nitro-stuffs-front/static/media/de_vertigo.61a20595cd785dfc9109.jpg",
+    "static/media/de_cache.jpg": "/nitro-stuffs-front/static/media/de_cache.3522ab84ad241323a868.jpg",
+    "static/media/de_nuke.jpg": "/nitro-stuffs-front/static/media/de_nuke.b6dc85223fb71e996303.jpg",
+    "static/media/de_cobblestone.jpg": "/nitro-stuffs-front/static/media/de_cobblestone.6e78d437edb393814a89.jpg",
+    "static/media/de_mirage.jpg": "/nitro-stuffs-front/static/media/de_mirage.fac144cfdf2ae0449f0f.jpg",
+    "static/media/de_inferno.jpg": "/nitro-stuffs-front/static/media/de_inferno.c94d3e95fd71284d4307.jpg",
+    "static/media/de_overpass.jpg": "/nitro-stuffs-front/static/media/de_overpass.2de9d681f31964a67409.jpg",
+    "static/media/de_train.jpg": "/nitro-stuffs-front/static/media/de_train.b702b1e33419d48b246e.jpg",
+    "static/media/bind.jpg": "/nitro-stuffs-front/static/media/bind.d75f395880436ee4be0c.jpg",
+    "static/media/split.jpg": "/nitro-stuffs-front/static/media/split.772a00a8dc22f4cc9409.jpg",
+    "static/media/haven.jpg": "/nitro-stuffs-front/static/media/haven.68d73778c68ef024ec92.jpg",
     "index.html": "/nitro-stuffs-front/index.html",
-    "static/media/left-arrow.svg": "/nitro-stuffs-front/static/media/left-arrow.42969c96baf8dd2fefa27533a1a1682f.svg",
-    "main.8513e5c4.css.map": "/nitro-stuffs-front/static/css/main.8513e5c4.css.map",
-    "main.66b5a225.js.map": "/nitro-stuffs-front/static/js/main.66b5a225.js.map"
+    "main.d50d886b.css.map": "/nitro-stuffs-front/static/css/main.d50d886b.css.map",
+    "main.39f9a6b2.js.map": "/nitro-stuffs-front/static/js/main.39f9a6b2.js.map"
   },
   "entrypoints": [
-    "static/css/main.8513e5c4.css",
-    "static/js/main.66b5a225.js"
+    "static/css/main.d50d886b.css",
+    "static/js/main.39f9a6b2.js"
   ]
 }
