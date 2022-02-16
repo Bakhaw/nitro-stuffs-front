@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 import { Link } from 'react-router-dom';
 
-import controllerIcon from '../../static/icons/controller.svg';
+import Image from '../Image';
 import { StateContext } from '../../Context';
 import routes from './routes';
 
@@ -22,11 +22,7 @@ function LeftMenu() {
   return (
     <nav>
       <button className='LeftMenu_button' onClick={toggleDrawer(true)}>
-        <img
-          className='LeftMenu_button__img'
-          alt='ControllerIcon'
-          src={controllerIcon}
-        />
+        <Image width='55' height='55' iconType='controller' />
       </button>
       <SwipeableDrawer
         disableDiscovery

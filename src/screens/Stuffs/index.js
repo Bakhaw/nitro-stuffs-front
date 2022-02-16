@@ -2,7 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 
 import BackButton from '../../components/BackButton';
 import FilterList from '../../components/FiltersList';
+import GameMap from '../../components/GameMap';
 import StuffList from '../../components/StuffList';
+import FilterDisplays from '../../components/FilterDisplays';
 
 import { fetchStuffListByMapKey } from '../../API/methods/stuffs';
 import { StateContext } from '../../Context';
@@ -12,6 +14,8 @@ function Stuffs({ match }) {
 
   const [activeFilters, setActiveFilters] = useState([]);
   const [activeStuffs, setActiveStuffs] = useState([]);
+
+  const [isDefaultDisplay, setIsDefaultDisplay] = useState(true);
 
   useEffect(() => {
     getStuffs();
@@ -26,6 +30,10 @@ function Stuffs({ match }) {
     );
 
     setActiveStuffs(activeStuffs);
+  }
+
+  function handleFilterDisplaysClick() {
+    setIsDefaultDisplay(!isDefaultDisplay);
   }
 
   function handleFilterClick(filter) {
@@ -45,11 +53,21 @@ function Stuffs({ match }) {
   return (
     <div className='Stuffs'>
       <BackButton />
-      <StuffList activeStuffs={activeStuffs} />
-      <FilterList
-        activeFilters={activeFilters}
-        handleFilterClick={handleFilterClick}
-      />
+      {isDefaultDisplay ? (
+        <GameMap activeStuffs={activeStuffs} map={match.params.map} />
+      ) : (
+        <StuffList activeStuffs={activeStuffs} />
+      )}
+      <div className='Stuffs__Filters'>
+        <FilterDisplays
+          isDefaultDisplay={isDefaultDisplay}
+          handleFilterDisplaysClick={handleFilterDisplaysClick}
+        />
+        <FilterList
+          activeFilters={activeFilters}
+          handleFilterClick={handleFilterClick}
+        />
+      </div>
     </div>
   );
 }

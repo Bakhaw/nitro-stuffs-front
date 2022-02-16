@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render properly 1`] = `
+"<div className=\\"FilterDisplays\\">
+  <div className=\\"FilterDisplays__Image FilterDisplays__ImageActive\\" onClick={[Function: mockConstructor]}>
+    <Image width=\\"50\\" height=\\"50\\" iconType=\\"miniMap\\" />
+  </div>
+  <div className=\\"FilterDisplays__Image \\" onClick={[Function: mockConstructor]}>
+    <Image width=\\"30\\" height=\\"30\\" iconType=\\"camera\\" />
+  </div>
+</div>"
+`;

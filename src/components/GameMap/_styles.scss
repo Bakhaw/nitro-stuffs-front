@@ -1,0 +1,41 @@
+.GameMap {
+  display: flex;
+  flex: 8;
+  flex-direction: column;
+  &__Title {
+    display: flex;
+    margin-bottom: 45px;
+    color: $White;
+  }
+  &__Content {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &__Map {
+      display: flex;
+      flex: 1;
+      img {
+        width: 100%;
+        max-width: $CalloutMap__MaxWidth;
+        height: 100%;
+        max-height: $CalloutMap__MaxHeight;
+      }
+      &__Shadow {
+        opacity: 0.3;
+      }
+    }
+    &__Video {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      &__Paragraphe {
+        display: flex;
+        flex: 1;
+        color: white;
+        justify-content: center;
+      }
+    }
+  }
+}

@@ -2,12 +2,10 @@
   display: flex;
   flex: 1;
   flex-direction: column;
-  img {
+  &__button {
     display: flex;
     align-self: flex-end;
     margin-right: 25px;
-    height: 30px;
-    width: 30px;
     cursor: pointer;
     transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 
