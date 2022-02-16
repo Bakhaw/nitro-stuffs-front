@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nitro-stuffs/static/css/main.8513e5c4.css",
+    "main.js": "/nitro-stuffs/static/js/main.8bf3c33d.js",
+    "static/media/controller.svg": "/nitro-stuffs/static/media/controller.5a2420202070631205937e53a25bbbc9.svg",
+    "index.html": "/nitro-stuffs/index.html",
+    "static/media/left-arrow.svg": "/nitro-stuffs/static/media/left-arrow.42969c96baf8dd2fefa27533a1a1682f.svg",
+    "main.8513e5c4.css.map": "/nitro-stuffs/static/css/main.8513e5c4.css.map",
+    "main.8bf3c33d.js.map": "/nitro-stuffs/static/js/main.8bf3c33d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8513e5c4.css",
+    "static/js/main.8bf3c33d.js"
+  ]
+}
