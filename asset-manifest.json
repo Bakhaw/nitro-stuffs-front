@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/nitro-stuffs/static/css/main.8513e5c4.css",
-    "main.js": "/nitro-stuffs/static/js/main.8bf3c33d.js",
-    "static/media/controller.svg": "/nitro-stuffs/static/media/controller.5a2420202070631205937e53a25bbbc9.svg",
-    "index.html": "/nitro-stuffs/index.html",
-    "static/media/left-arrow.svg": "/nitro-stuffs/static/media/left-arrow.42969c96baf8dd2fefa27533a1a1682f.svg",
-    "main.8513e5c4.css.map": "/nitro-stuffs/static/css/main.8513e5c4.css.map",
-    "main.8bf3c33d.js.map": "/nitro-stuffs/static/js/main.8bf3c33d.js.map"
+    "main.css": "/nitro-stuffs-front/static/css/main.8513e5c4.css",
+    "main.js": "/nitro-stuffs-front/static/js/main.66b5a225.js",
+    "static/media/controller.svg": "/nitro-stuffs-front/static/media/controller.5a2420202070631205937e53a25bbbc9.svg",
+    "index.html": "/nitro-stuffs-front/index.html",
+    "static/media/left-arrow.svg": "/nitro-stuffs-front/static/media/left-arrow.42969c96baf8dd2fefa27533a1a1682f.svg",
+    "main.8513e5c4.css.map": "/nitro-stuffs-front/static/css/main.8513e5c4.css.map",
+    "main.66b5a225.js.map": "/nitro-stuffs-front/static/js/main.66b5a225.js.map"
   },
   "entrypoints": [
     "static/css/main.8513e5c4.css",
-    "static/js/main.8bf3c33d.js"
+    "static/js/main.66b5a225.js"
   ]
 }
