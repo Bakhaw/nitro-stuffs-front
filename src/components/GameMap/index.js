@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import MarkerList from '../MarkerList';
@@ -27,13 +27,11 @@ function GameMap({ activeStuffs, map }) {
 
   //Stuff to show on the screen: the selected one (stuffSelected) or the default one (activeStuffs: with the filters)
   function showStuff() {
-    if (stuffSelected.length) {
-      setStuffShown(stuffSelected);
-      setIsSelectedStuff(true);
-    } else {
-      setStuffShown(activeStuffs);
-      setIsSelectedStuff(false);
-    }
+    const stuffShown = stuffSelected.length ? stuffSelected : activeStuffs;
+    const isSelectedStuff = !!stuffSelected.length;
+
+    setStuffShown(stuffShown);
+    setIsSelectedStuff(isSelectedStuff);
   }
 
   //Handle click function : Called when a stuff is selected
@@ -59,6 +57,10 @@ function GameMap({ activeStuffs, map }) {
     setVideoSelected(null);
   }
 
+  function showAxisOnMap(e) {
+    console.log({ offsetX: e.nativeEvent.offsetX, offsetY: e.nativeEvent.offsetY })
+  }
+
   return (
     <div className='GameMap'>
       <div className='GameMap__Title'>
@@ -72,6 +74,9 @@ function GameMap({ activeStuffs, map }) {
             }`}
             alt='Mirage'
             src={require(`../../static/images/${currentGame}/maps-callouts/${map}.jpg`)}
+            onClick={showAxisOnMap}
+            width={750}
+            height={720}
           />
           <MarkerList
             allVideos={allVideos}
